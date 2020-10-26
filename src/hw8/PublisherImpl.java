@@ -10,13 +10,13 @@ public class PublisherImpl implements Publisher {
 	@Override
 	public void registerSubscriber(Subscriber s) {
 		// TODO Auto-generated method stub
-
+		subscribers.add(s);
 	}
 
 	@Override
 	public void unregisterSubscriber(Subscriber s) {
 		// TODO Auto-generated method stub
-
+		subscribers.remove(s);
 	}
 
 	@Override
@@ -31,6 +31,8 @@ public class PublisherImpl implements Publisher {
 	}
 	
 	public void runSimulation() {
+		
+		
 		
 	}
 	
