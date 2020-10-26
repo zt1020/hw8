@@ -1,12 +1,13 @@
 package hw8;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
 public class PublisherImpl implements Publisher {
 
 	
-	private List<Subscriber> subscribers;
+	private List<Subscriber> subscribers = new ArrayList<Subscriber>();
 	
 	@Override
 	public void registerSubscriber(Subscriber s) {
@@ -37,7 +38,7 @@ public class PublisherImpl implements Publisher {
 	public void runSimulation() {
 		Random r = new Random();
 		for(int i = 0; i<200; i++) {
-			Event e = generateEvent(i, r.nextInt(30) );
+			Event e = generateEvent(i, r.nextInt() );
 			System.out.println(e.getEventSeqNum() + " " + e.getEventDataValue());
 			notifySubscribers(e);
 			
