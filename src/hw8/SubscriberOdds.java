@@ -29,12 +29,12 @@ public class SubscriberOdds implements Subscriber {
 		
 	}
 	
-	private void setEventsHandled(Boolean b) {
-		
+	private void setEventsHandled(int b) {
+		eventsHandled = b;
 	}
 	
-	private Boolean getEventsHandled() {
-		return null;
+	private int getEventsHandled() {
+		return eventsHandled;
 		
 	}
 
